@@ -2,8 +2,8 @@ package WebProject.TodoList.domain;
 
 public class ListComp {
     private Long num;
-    private String content;
-    private boolean done;
+    private String content = "";
+    private boolean done = false;
 
     public Long getNum() {
         return num;
