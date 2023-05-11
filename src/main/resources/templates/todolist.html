@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>To-do List</title>
+  <style>
+    .title {
+      display: block;
+      margin: 5% 0 0 0;
+      font-family: IBMPlexSans;
+      font-size: 96px;
+      font-weight: auto;
+      text-align: center;
+      color: #0063bf;
+    }
+
+    .subtitle {
+      display: block;
+      margin: 0 0 0 0;
+      font-family: IBMPlexSerif;
+      font-size: 40px;
+      text-align: center;
+      color: #797979;
+    }
+
+    .ListRect {
+      width: 1065px;
+      height: 800px;
+      margin: 5% auto 0 auto;
+      border-radius: 28px 28px 0px 0px;
+      background-color: rgba(217, 217, 217, 0.5);
+    }
+
+    .div1 {
+      width: auto;
+      height: 10px;
+      background-color: white;
+    }
+
+    .button {
+      font-family: IBMPlexMono;
+      font-size: 60px;
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+    }
+
+    #plus {
+      margin: 0 20px 0 88%;
+    }
+
+    #minus {
+      margin: 0 1% 0 0;
+    }
+    
+    .lists {
+      margin-top: 5%;
+      margin-left: 8%;
+      display: flex;
+    }
+
+    .checkbox {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      border: solid 6px #000000;
+      display: inline-block;
+    }
+
+    .check{
+      width: 70px;
+      height: 70px;
+      margin-top: -10px;
+      margin-left: -55px;
+      visibility: hidden;
+    }
+
+    .content {
+      margin-left: 20px;
+      width: 727px;
+      font-family: IBMPlexSans;
+      font-size: 50px;
+      font-weight: 600;
+      color: #000000;
+      display: inline;
+      vertical-align: text-bottom;
+    }
+
+    .edit{
+      width: 40px;
+      height: 40px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title_bar">
+    <span class="title">To-Do List</span>
+    <span class="subtitle">Make your life Effective</span>
+  </div>
+  <div>
+    <div class="ListRect">
+      <div>
+        <br>
+        <button class="button" id="plus">+</button>
+        <button class="button" id="minus">-</button>
+      </div>
+      <div class="lists">
+        <span class="checkbox"></span>
+        <img class="check" src="/images/check-symbol.png">
+        <div class="content">Make To-Do List</div>
+        <img class="edit" src="/images/pencil.png" alt="edit button">
+      </div>
+      <div class="lists">
+        <span class="checkbox"></span>
+        <img class="check" src="/images/check-symbol.png">
+        <div class="content">Study English</div>
+        <img class="edit" src="/images/pencil.png" alt="edit button">
+      </div>
+      <div class="lists">
+        <span class="checkbox"></span>
+        <img class="check" src="/images/check-symbol.png">
+        <div class="content">Update Linked-in</div>
+        <img class="edit" src="/images/pencil.png" alt="edit button">
+      </div>
+      <div class="lists">
+        <span class="checkbox"></span>
+        <img class="check" src="/images/check-symbol.png">
+        <div class="content">Algorithm Study</div>
+        <img class="edit" src="/images/pencil.png" alt="edit button">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
