@@ -3,7 +3,7 @@ package WebProject.TodoList.domain;
 public class ListComp {
     private Long num;
     private String content = "";
-    private boolean done = false;
+    private int done = 0;
 
     public Long getNum() {
         return num;
@@ -21,11 +21,11 @@ public class ListComp {
         this.content = content;
     }
 
-    public boolean isDone() {
+    public int isDone() {
         return done;
     }
 
-    public void setDone(boolean done) {
+    public void setDone(int done) {
         this.done = done;
     }
 }

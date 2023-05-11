@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -134,6 +134,12 @@
         <span class="checkbox" onclick="check_box()"></span>
         <img class="check" src="/images/check-symbol.png">
         <div class="content">Algorithm Study</div>
+        <img class="edit" src="/images/pencil.png" alt="edit button">
+      </div>
+      <div class="lists" th:each="list : ${lists}">
+        <span class="checkbox" onclick="check_box()"></span>
+        <img class="check" src="/images/check-symbol.png">
+        <div class="content" th:text="${list.content}"></div>
         <img class="edit" src="/images/pencil.png" alt="edit button">
       </div>
     </div>
