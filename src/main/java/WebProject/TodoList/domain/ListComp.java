@@ -1,5 +1,6 @@
 package WebProject.TodoList.domain;
 
+
 public class ListComp {
     private Long num;
     private String content = "";
