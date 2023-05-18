@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,8 @@ import java.util.List;
 public class ToDoController {
 
     public static List<ListComp> comps = new ArrayList<>();
+
+    @ResponseBody
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Model model){
         comps.add(new ListComp("Make To-Do List"));
