@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
 
 <head>
   <meta charset="UTF-8">
@@ -10,7 +14,6 @@
       margin: 5% 0 0 0;
       font-family: IBMPlexSans;
       font-size: 96px;
-      font-weight: auto;
       text-align: center;
       color: #0063bf;
     }
@@ -26,7 +29,7 @@
 
     .ListRect {
       width: 1065px;
-      height: 800px;
+      height: 90vh;
       margin: 5% auto 0 auto;
       border-radius: 28px 28px 0px 0px;
       background-color: rgba(217, 217, 217, 0.5);
@@ -34,7 +37,7 @@
 
     .div1 {
       width: auto;
-      height: 10px;
+      height: 100vh;
       background-color: white;
     }
 
@@ -53,7 +56,7 @@
     #minus {
       margin: 0 1% 0 0;
     }
-    
+
     .lists {
       margin-top: 5%;
       margin-left: 8%;
@@ -68,12 +71,12 @@
       display: inline-block;
     }
 
-    .check{
+    .check {
       width: 70px;
       height: 70px;
       margin-top: -10px;
       margin-left: -55px;
-      visibility: hidden;
+
     }
 
     .content {
@@ -87,16 +90,17 @@
       vertical-align: text-bottom;
     }
 
-    .edit{
+    .edit {
       width: 40px;
       height: 40px;
-      visibility: hidden;
+
     }
   </style>
   <script>
-    function check_box(){
-      
-    };
+    $(document).ready(function () {
+      console.log("ready!");
+    });
+
   </script>
 </head>
 
@@ -111,36 +115,6 @@
         <br>
         <button class="button" id="plus">+</button>
         <button class="button" id="minus">-</button>
-      </div>
-      <div class="lists">
-        <span class="checkbox" onclick="check_box()"></span>
-        <img class="check" src="/images/check-symbol.png">
-        <div class="content">Make To-Do List</div>
-        <img class="edit" src="/images/pencil.png" alt="edit button">
-      </div>
-      <div class="lists">
-        <span class="checkbox" onclick="check_box()"></span>
-        <img class="check" src="/images/check-symbol.png">
-        <div class="content">Study English</div>
-        <img class="edit" src="/images/pencil.png" alt="edit button">
-      </div>
-      <div class="lists">
-        <span class="checkbox" onclick="check_box()"></span>
-        <img class="check" src="/images/check-symbol.png">
-        <div class="content">Update Linked-in</div>
-        <img class="edit" src="/images/pencil.png" alt="edit button">
-      </div>
-      <div class="lists">
-        <span class="checkbox" onclick="check_box()"></span>
-        <img class="check" src="/images/check-symbol.png">
-        <div class="content">Algorithm Study</div>
-        <img class="edit" src="/images/pencil.png" alt="edit button">
-      </div>
-      <div class="lists" th:each="list : ${lists}">
-        <span class="checkbox" onclick="check_box()"></span>
-        <img class="check" src="/images/check-symbol.png">
-        <div class="content" th:text="${list.content}"></div>
-        <img class="edit" src="/images/pencil.png" alt="edit button">
       </div>
     </div>
   </div>
