@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 <head>
   <meta charset="UTF-8">
   <title>To-do List</title>
@@ -56,7 +55,7 @@
     #minus {
       margin: 0 1% 0 0;
     }
-
+    
     .lists {
       margin-top: 5%;
       margin-left: 8%;
@@ -71,12 +70,12 @@
       display: inline-block;
     }
 
-    .check {
+    .check{
       width: 70px;
       height: 70px;
       margin-top: -10px;
       margin-left: -55px;
-
+    
     }
 
     .content {
@@ -90,17 +89,17 @@
       vertical-align: text-bottom;
     }
 
-    .edit {
+    .edit{
       width: 40px;
       height: 40px;
-
+      
     }
   </style>
   <script>
-    $(document).ready(function () {
+    $(document).ready(function(){
       console.log("ready!");
     });
-
+  
   </script>
 </head>
 
@@ -115,6 +114,12 @@
         <br>
         <button class="button" id="plus">+</button>
         <button class="button" id="minus">-</button>
+      </div>
+      <div class="lists" th:each="comp : ${comps}">
+        <span class="checkbox"></span>
+        <img class="check" src="images/check-symbol.png" alt="check">
+        <div class="content" th:text="${comp.content}"></div>
+        <img class="edit" src="images/pencil.png" alt="edit button">
       </div>
     </div>
   </div>
