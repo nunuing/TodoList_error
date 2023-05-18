@@ -6,6 +6,10 @@ public class ListComp {
     private String content = "";
     private int done = 0;
 
+    public ListComp(String content) {
+        this.content = content;
+    }
+
     public Long getNum() {
         return num;
     }
